@@ -1,6 +1,6 @@
-let music = new Audio("./music/music.mp3");
-let turn_sound = new Audio("./music/ting.mp3");
-let gameover = new Audio("./music/gameover.mp3");
+let music = new Audio("./music.mp3");
+let turn_sound = new Audio("./ting.mp3");
+let gameover = new Audio("./gameover.mp3");
 let startBtn = document.getElementById("start-btn");
 let resetBtn = document.getElementById("reset");
 let mainHeading = document.getElementById("main-heading");
