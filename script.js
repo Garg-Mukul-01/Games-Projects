@@ -50,7 +50,7 @@ const checkWin = () => {
           ".line"
         ).style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
       }else{
-        document.querySelector(".line").style.width = "45vw";
+        document.querySelector(".line").style.width = "60vw";
         document.querySelector(
           ".line"
         ).style.transform = `translate(${e[3]-e[2]}vw,${e[4]+e[3]}vw) rotate(${e[5]}deg)`;
