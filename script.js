@@ -4,6 +4,7 @@ let gameover = new Audio("./gameover.mp3");
 let startBtn = document.getElementById("start-btn");
 let resetBtn = document.getElementById("reset");
 let mainHeading = document.getElementById("main-heading");
+let availWidth = window.screen.availWidth;
 resetBtn.style.display = "none";
 let turn = "X";
 let isgameover = false;
@@ -43,10 +44,17 @@ const checkWin = () => {
         gameover.play();
       }
       isgameover = true;
-      document.querySelector(".line").style.width = "21vw";
-      document.querySelector(
-        ".line"
-      ).style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
+      if(availWidth>700){
+        document.querySelector(".line").style.width = "21vw";
+        document.querySelector(
+          ".line"
+        ).style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
+      }else{
+        document.querySelector(".line").style.width = "38vw";
+        document.querySelector(
+          ".line"
+        ).style.transform = `translate(${e[3]-e[2]}vw,${e[4]+e[3]}vw) rotate(${e[5]}deg)`;
+      }
     }
   });
 };
