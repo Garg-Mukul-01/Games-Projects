@@ -19,7 +19,7 @@ const changeTurn = () => {
 const checkWin = () => {
   let boxtexts = document.getElementsByClassName("boxtext");
   let wins = [];
-  if(availWidth>700){
+  if(availWidth>900){
    wins = [
     [0, 1, 2, 5, 5, 0],
     [3, 4, 5, 5, 15, 0],
@@ -58,14 +58,17 @@ const checkWin = () => {
         gameover.play();
       }
       isgameover = true;
-      if(availWidth>1000){
-        document.querySelector(".line").style.width = "21vw";
+      if(availWidth<1000){
+        document.querySelector(".line").style.width = "42vw";
+        document.querySelector(
+          ".line"
+        ).style.transform = `translate(${e[3]}vw,${e[4]*1.5}vw) rotate(${e[5]}deg)`;
       }else{
-        document.querySelector(".line").style.width = "43vw";
+        document.querySelector(".line").style.width = "21vw";
+        document.querySelector(
+          ".line"
+        ).style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
       }
-      document.querySelector(
-        ".line"
-      ).style.transform = `translate(${e[3]}vw,${e[4]*1.5}vw) rotate(${e[5]}deg)`;
       
     }
   });
